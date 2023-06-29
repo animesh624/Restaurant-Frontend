@@ -16,7 +16,7 @@ const DishList = ({ onEdit, onDelete }) => {
       try {
         await axios.delete(`https://webappnewcreated.azurewebsites.net/api/v1/${id}`);
         onDelete(id);
-        navigate('/'); // Redirect to the home page after deletion
+        navigate('/home'); // Redirect to the home page after deletion
       } catch (error) {
         console.error(error);
       }
