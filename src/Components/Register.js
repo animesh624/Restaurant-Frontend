@@ -25,7 +25,7 @@ const Register = () => {
       newUser.Email=Email;
       newUser.Password=Password;
       console.log(newUser);
-      const response = await axios.post('https://localhost:7236/register1', newUser);
+      const response = await axios.post('https://webappnewcreated.azurewebsites.net/register1', newUser);
 
       // Reset the form fields
       setUserName('');

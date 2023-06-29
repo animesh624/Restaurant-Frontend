@@ -21,7 +21,7 @@ const AddNewDish = () => {
     try {
       // Send the new dish data to the backend API
       console.log(newDish);
-      const response = await axios.post('https://localhost:7236/api/v1', newDish);
+      const response = await axios.post('https://webappnewcreated.azurewebsites.net/api/v1', newDish);
 
       // Reset the form fields
       setdishName('');

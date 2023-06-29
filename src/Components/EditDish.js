@@ -42,7 +42,7 @@ const EditDish = () => {
       newDish.price=parseInt(price);
       newDish.weight=parseInt(weight);
       console.log("Before Axios Post",newDish);
-      const response = await axios.put(`https://localhost:7236/api/v1/update/${Id}`, newDish);
+      const response = await axios.put(`https://webappnewcreated.azurewebsites.net/api/v1/update/${Id}`, newDish);
 
       // Reset the form fields
       setdishName('');

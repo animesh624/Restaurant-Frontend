@@ -14,7 +14,7 @@ const DishList = ({ onEdit, onDelete }) => {
     const confirmed = window.confirm('Are you sure you want to delete this dish?');
     if (confirmed) {
       try {
-        await axios.delete(`https://localhost:7236/api/v1/${id}`);
+        await axios.delete(`https://webappnewcreated.azurewebsites.net/api/v1/${id}`);
         onDelete(id);
         navigate('/'); // Redirect to the home page after deletion
       } catch (error) {
@@ -49,7 +49,7 @@ const DishList = ({ onEdit, onDelete }) => {
         }
       };
       console.log("Token received ", token);
-      const response = await axios.get('https://localhost:7236/api/v1', config);
+      const response = await axios.get('https://webappnewcreated.azurewebsites.net/api/v1', config);
       console.log(response.data.data);
       setData(response.data.data);
       setItems(response.data.data);
