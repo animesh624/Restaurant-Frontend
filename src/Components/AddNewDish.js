@@ -27,7 +27,7 @@ const AddNewDish = () => {
       setdishName('');
       setPrice('');
       setWeight('');
-      navigate('/');
+      navigate('/home');
     } catch (error) {
       console.error(error);
     }

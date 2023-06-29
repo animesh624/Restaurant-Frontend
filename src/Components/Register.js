@@ -31,7 +31,7 @@ const Register = () => {
       setUserName('');
       setEmail('');
       setPassword('');
-      navigate('/');
+      navigate('/home');
     } catch (error) {
       console.error(error);
     }
