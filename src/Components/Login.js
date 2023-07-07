@@ -22,7 +22,7 @@ const Login = () => {
       newUser.UserName=UserName;
       newUser.Password=Password;
       console.log(newUser);
-      const response = await axios.post('https://webappnewcreated.azurewebsites.net/Login1', newUser);
+      const response = await axios.post('https://curdapp20230707121043.azurewebsites.net/login', newUser);
       const token=response.data.token;
       localStorage.setItem("token",token);
 

@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import DishList from './Components/DishList';
 import AddNewDish from './Components/AddNewDish';
 import EditDish from './Components/EditDish';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import axios from 'axios';
 import Register from './Components/Register';
 import Login from './Components/Login';
 import Navbar from './Components/Navbar';
+
 const App = () => {
-  const token = localStorage.getItem('token');
-  
+  // const navigate = useNavigate();
 
   const handleEdit = (id) => {
     // Handle edit functionality
@@ -24,27 +24,15 @@ const App = () => {
   
 
   // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
-  // const fetchData = async () => {
-  //   try {
-  //     const token = localStorage.getItem("token");
-  //     const config = {
-  //       headers: {
-  //         Authorization: "Bearer " + token
-  //       }
-  //     };
-  //     console.log("Token received ", token);
-  //     const response = await axios.get('https://localhost:7236/api/v1', config);
-  //     console.log(response.data.data);
-  //     setData(response.data.data);
-  //     setItems(response.data.data);
-  //   } catch (error) {
-  //     console.error(error);
+  //     const token=localStorage.getItem('token');
+  //   if(token){
+  //     navigate("/home");
   //   }
-  // };
-
+  //   else{
+  //     navigate("/register");
+  //   }
+    
+  // }, [navigate]);
   return (
     <>
 

@@ -25,13 +25,13 @@ const Register = () => {
       newUser.Email=Email;
       newUser.Password=Password;
       console.log(newUser);
-      const response = await axios.post('https://webappnewcreated.azurewebsites.net/register1', newUser);
+      const response = await axios.post('https://curdapp20230707121043.azurewebsites.net/register', newUser);
 
       // Reset the form fields
       setUserName('');
       setEmail('');
       setPassword('');
-      navigate('/home');
+      navigate('/login');
     } catch (error) {
       console.error(error);
     }

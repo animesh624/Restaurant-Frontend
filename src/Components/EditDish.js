@@ -45,7 +45,7 @@ const EditDish = () => {
     };
 
     try {
-      await axios.put(`https://webappnewcreated.azurewebsites.net/api/v1/update/${Id}`, newDish);
+      await axios.put(`https://curdapp20230707121043.azurewebsites.net/api/v1/update/${Id}`, newDish);
       setdishName('');
       setPrice('');
       setWeight('');

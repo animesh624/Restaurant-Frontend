@@ -36,7 +36,7 @@ const AddNewDish = () => {
     try {
       // Send the new dish data to the backend API
       const response = await axios.post(
-        'https://webappnewcreated.azurewebsites.net/api/v1',
+        'https://curdapp20230707121043.azurewebsites.net/api/v1',
         newDish
       );
 
