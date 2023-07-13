@@ -31,7 +31,7 @@ const Login = () => {
       // Reset the form fields
       setUserName('');
       setPassword('');
-      navigate('/home');
+      navigate('/');
     } catch (error) {
       console.error(error);
     }

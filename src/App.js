@@ -39,7 +39,7 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact path="/home" element={<DishList onEdit={handleEdit} onDelete={handleDelete} />} />
+          <Route exact path="/" element={<DishList onEdit={handleEdit} onDelete={handleDelete} />} />
           <Route exact path="/create" element={<AddNewDish />} />
           <Route exact path="/edit" element={<EditDish />} />
           <Route exact path="/register" element={<Register />} />

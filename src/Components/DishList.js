@@ -51,6 +51,36 @@ const DishList = ({ onEdit, onDelete }) => {
     }
   };
 
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+    // console.log("This is file ",file);
+    const formData = new FormData();
+    formData.append('file', file);
+    var fileData;
+    const reader = new FileReader();
+    
+    reader.onload = function (e) {
+      fileData = e.target.result;
+      console.log("Uploaded file data 1: ", fileData);
+      const calling=async ()=>{
+        try {
+          console.log("Uploaded file data 2: ", fileData);
+          // console.log("This is form data ",formData);
+          const response = await axios.post('http://localhost:7292/api/takeBlobInput', fileData, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      calling();
+    };
+    reader.readAsText(file);
+    
+  };
+
   return (
     <>
       {data.length > 0 && (
@@ -61,8 +91,11 @@ const DishList = ({ onEdit, onDelete }) => {
               <div className="col-md-8">
                 <div className="d-flex justify-content-end mb-4">
                   <Link to="/create" className="btn btn-primary">
-                    Create Dish
+                    Create Single Dish
                   </Link>
+                </div>
+                <div className="d-flex justify-content-end mb-4">
+                  <input type="file" accept=".json" className="btn btn-primary" onChange={handleFileUpload} />
                 </div>
               </div>
             </div>

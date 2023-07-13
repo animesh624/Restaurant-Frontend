@@ -49,14 +49,14 @@ const EditDish = () => {
       setdishName('');
       setPrice('');
       setWeight('');
-      navigate('/home');
+      navigate('/');
     } catch (error) {
       console.error(error);
     }
   };
 
   const handleCancelEdit = () => {
-    navigate('/home');
+    navigate('/');
   };
 
   return (

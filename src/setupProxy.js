@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://curdapp20230707121043.azurewebsites.net',
+      target: '*',
       changeOrigin: true,
     })
   );

@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <Link to="/home" className="navbar-brand">Restaurant</Link>
+        <Link to="/" className="navbar-brand">Restaurant</Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -51,7 +51,7 @@ const Navbar = () => {
           <ul className="navbar-nav ml-auto">
             {isLoggedIn && (
               <li className="nav-item">
-                <Link to="/home" className="nav-link">Home</Link>
+                <Link to="/" className="nav-link">Home</Link>
               </li>
             )}
             {!isLoggedIn && (
