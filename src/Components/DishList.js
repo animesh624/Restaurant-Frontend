@@ -66,7 +66,7 @@ const DishList = ({ onEdit, onDelete }) => {
         try {
           console.log("Uploaded file data 2: ", fileData);
           // console.log("This is form data ",formData);
-          const response = await axios.post('http://localhost:7292/api/takeBlobInput', fileData, {
+          const response = await axios.post('https://functionapp620230715124953.azurewebsites.net/api/takeBlobInput', fileData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
