@@ -25,7 +25,7 @@ const Register = () => {
       newUser.Email=Email;
       newUser.Password=Password;
       console.log(newUser);
-      const response = await axios.post('https://curdapp20230707121043.azurewebsites.net/register', newUser);
+      const response = await axios.post('https://curdapp20230724074045.azurewebsites.net/register', newUser);
 
       // Reset the form fields
       setUserName('');

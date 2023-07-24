@@ -21,7 +21,7 @@ const DishList = ({ onEdit, onDelete }) => {
           Authorization: 'Bearer ' + token,
         },
       };
-      const response = await axios.get('https://curdapp20230707121043.azurewebsites.net/api/v1', config);
+      const response = await axios.get('https://curdapp20230724074045.azurewebsites.net/api/v1', config);
       setData(response.data.data);
     } catch (error) {
       console.error(error);
@@ -32,7 +32,7 @@ const DishList = ({ onEdit, onDelete }) => {
     const confirmed = window.confirm('Are you sure you want to delete this dish?');
     if (confirmed) {
       try {
-        await axios.delete(`https://curdapp20230707121043.azurewebsites.net/api/v1/${id}`);
+        await axios.delete(`https://curdapp20230724074045.azurewebsites.net/api/v1/${id}`);
         onDelete(id);
         // Update the data state by removing the deleted dish
         setData((prevData) => prevData.filter((dish) => dish.id !== id));
@@ -66,7 +66,7 @@ const DishList = ({ onEdit, onDelete }) => {
         try {
           console.log("Uploaded file data 2: ", fileData);
           // console.log("This is form data ",formData);
-          const response = await axios.post('https://functionapp620230715124953.azurewebsites.net/api/takeBlobInput', fileData, {
+          const response = await axios.post('https://functionapp620230724085219.azurewebsites.net/api/takeBlobInput', fileData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
